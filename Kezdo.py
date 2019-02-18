@@ -10,9 +10,9 @@ def Oldalbeolvasas():
     vizsgalat = BeautifulSoup(html, "html.parser")
     # Megkeresi az összes title tag-ot és kíirja a console-ra.
     for title in vizsgalat.find_all("title"):
-        # Kiírja teg-gel együtt
+        # Kiírja tag-gel együtt
         print(title)
-        # Kiírja teg nélkül
+        # Kiírja tag nélkül
         print(title.text)
         
         
