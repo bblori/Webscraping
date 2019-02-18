@@ -15,4 +15,5 @@ def Oldalbeolvasas():
         # Kiírja teg nélkül
         print(title.text)
         
+        
 Oldalbeolvasas()
