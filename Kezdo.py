@@ -16,4 +16,5 @@ def Oldalbeolvasas():
         print(title.text)
         
         
+        
 Oldalbeolvasas()
