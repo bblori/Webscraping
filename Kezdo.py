@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 
 
 def Oldalbeolvasas():
-    # bekér egy url címet
+    # Bekér egy url címet
     x = input("Kerem az URL-t: ")
 
     html = urlopen("http://"+x)
