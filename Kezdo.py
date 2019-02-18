@@ -1,16 +1,18 @@
-from tkinter import Tk
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
 
 
+def Oldalbeolvasas():
+    # bekér egy url címet
+    x = input("Kerem az URL-t: ")
 
-window = Tk()
-
-window.geometry("500x400")
-window.title("Title")
-
-
-
-
-
-
-
-window.mainloop()
+    html = urlopen("http://"+x)
+    vizsgalat = BeautifulSoup(html, "html.parser")
+    # Megkeresi az összes title tag-ot és kíirja a console-ra.
+    for title in vizsgalat.find_all("title"):
+        # Kiírja teg-gel együtt
+        print(title)
+        # Kiírja teg nélkül
+        print(title.text)
+        
+Oldalbeolvasas()
